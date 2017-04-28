@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<style>
+	.hide {
+		display:none;
+	}
+
+	.new-clinic, .new-prescriber, .new-secondary-contact {
+		display: grid;
+	}
+
+	.container textarea {
+		min-height:400px;
+		min-width:300px;
+		width:300px;
+	}
+</style>
+
+<h2>Register</h2>
+
+<div class="container">
+	<div class="col-xs-6">
+		<div id="container"></div>
+	</div>
+	<div class="col-xs-6">
+		<textarea readonly id="result"></textarea>
+	</div>
+</div>
+
+		<script>
+			var _initialClinics = [
+				{ id: 1, name: 'Clinic 1', postalcode: 'A1A1A1', province: 'ON' },
+				{ id: 2, name: 'Clinic 2', postalcode: 'A2A2A2', province: 'ON' },
+				{ id: 3, name: 'Clinic 3', postalcode: 'A3A3A3', province: 'ON' },
+				{ id: 4, name: 'Clinic 4', postalcode: 'A4A4A4', province: 'ON' }
+			];
+		</script>
+		<script src="~/Scripts/dist/register.bundle.js"></script>
